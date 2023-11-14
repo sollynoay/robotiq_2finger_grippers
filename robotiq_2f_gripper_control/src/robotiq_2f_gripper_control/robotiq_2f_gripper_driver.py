@@ -44,12 +44,13 @@ The end user should not need to use this class direcly since an instance of it i
 controlling a given gripper, and commanded by the user commands puubished by an action client instance.  
 """
 
-from robotiq_2f_gripper import Robotiq2FingerGripper
+from .robotiq_2f_gripper import Robotiq2FingerGripper
 from robotiq_2f_gripper_msgs.msg import RobotiqGripperCommand, RobotiqGripperStatus, CommandRobotiqGripperGoal
 from sensor_msgs.msg import JointState
 import numpy as np
 import rospy
 from enum import Enum
+import rospy
 
 WATCHDOG_TIME = 1.0   # Max Time without communication with gripper allowed
 
@@ -74,7 +75,7 @@ class Robotiq2FingerGripperDriver:
                             1: Driver is running
                             2: Gripper has been activated
     """
-    def __init__(self, comport = '/dev/ttyUSB0', baud = '115200', stroke = 0.085, joint_name='finger_joint'):
+    def __init__(self, comport = '/dev/ttyTool', baud = '54321', stroke = 0.085, joint_name='finger_joint'):
         self._comport = comport
         self._baud = baud
         self._joint_name = joint_name          

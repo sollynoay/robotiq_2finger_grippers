@@ -9,6 +9,8 @@ from math import ceil
 import numpy as np
 import array
 
+import rospy
+
 ACTION_REQ_IDX = 7
 POS_INDEX      = 10 
 SPEED_INDEX    = 11
@@ -51,6 +53,8 @@ class Robotiq2FingerGripper:
         """Request the status from the gripper and return it in the Robotiq2FGripper_robot_input msg type."""
 
         #Acquire status from the Gripper
+        rospy.sleep(0.5)
+        
         status = self.client.getStatus(6);
 
         # Check if read was successful

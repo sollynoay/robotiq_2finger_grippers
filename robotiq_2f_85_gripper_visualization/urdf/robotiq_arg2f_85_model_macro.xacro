@@ -193,7 +193,16 @@
   </xacro:macro>
 
   <!-- Initialization of all joints and links -->
-  <xacro:macro name="robotiq_arg2f_85" params="prefix">
+  <xacro:macro name="robotiq_arg2f_85" params="
+    prefix
+    transmission_hw_interface:=hardware/interface/EffortJointInterface
+    parent_link"
+  >
+    <joint name="${prefix}attach_gripper" type="fixed">
+      <origin rpy="0.0 0.0 ${pi/2}" xyz="0 0 0"/> 
+      <parent link="${parent_link}"/>
+      <child link="${prefix}robotiq_arg2f_base_link"/>
+    </joint>
     <xacro:robotiq_arg2f_base_link prefix="${prefix}"/>
     <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="85"/>
     <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="85"/>

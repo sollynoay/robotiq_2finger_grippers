@@ -1,0 +1,9 @@
+setup.py
+src/robotiq_2f_gripper_control/__init__.py
+src/robotiq_2f_gripper_control/modbus_crc.py
+src/robotiq_2f_gripper_control/robotiq_2f_gripper.py
+src/robotiq_2f_gripper_control/robotiq_2f_gripper_driver.py
+src/robotiq_2f_gripper_control.egg-info/PKG-INFO
+src/robotiq_2f_gripper_control.egg-info/SOURCES.txt
+src/robotiq_2f_gripper_control.egg-info/dependency_links.txt
+src/robotiq_2f_gripper_control.egg-info/top_level.txt

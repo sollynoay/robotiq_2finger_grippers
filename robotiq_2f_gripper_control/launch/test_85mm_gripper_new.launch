@@ -14,7 +14,13 @@
         <arg name="sim" value="$(arg sim)"/>
     </include>
 
-    
+    <param name="robot_description" command="$(find xacro)/xacro $(find robotiq_2f_85_gripper_visualization)/urdf/robotiq_arg2f_85_model.xacro" />  
+
+    <node name="gripper_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+        <param name="robot_description" value="robot_description"/>
+        <param name="publish_frequency" type="double" value="100.0" />
+    </node>
+
     <node name="gripper_joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
         <rosparam param="source_list">[/joint_states]</rosparam>
         <rosparam param="use_gui">false</rosparam>

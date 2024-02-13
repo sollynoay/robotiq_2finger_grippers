@@ -1,0 +1,7 @@
+setup.py
+src/robotiq_modbus_rtu/__init__.py
+src/robotiq_modbus_rtu/comModbusRtu.py
+src/robotiq_modbus_rtu.egg-info/PKG-INFO
+src/robotiq_modbus_rtu.egg-info/SOURCES.txt
+src/robotiq_modbus_rtu.egg-info/dependency_links.txt
+src/robotiq_modbus_rtu.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: robotiq-modbus-rtu
+Version: 1.0.0
+Summary: A stack to communicate with Robotiq grippers using the Modbus RTU protocol
+Home-page: http://wiki.ros.org/robotiq
+Author: Nicolas Lauzier (Robotiq inc.), Kelsey Hawkins <kphawkins@gatech.edu>
+Maintainer: Jean-Philippe Roberge
+Maintainer-email: ros@robotiq.com
+License: BSD
+Platform: UNKNOWN
+
+UNKNOWN
+

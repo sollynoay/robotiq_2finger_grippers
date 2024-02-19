@@ -101,7 +101,7 @@ class Robotiq2FingerGripperDriver:
         self._prev_joint_state_time = rospy.get_time() 
         self._driver_state = 0
         self.is_ready = False
-        
+        rospy.sleep(0.5)
         if not self._gripper.getStatus():
             rospy.logerr("Failed to contact gripper on port %s ... ABORTING" % self._comport)
             return                
